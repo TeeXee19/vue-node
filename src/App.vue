@@ -1,25 +1,42 @@
 <template>
-  <div id="app">
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <router-link to="/" class="navbar-brand">TeeXee</router-link>
-      <div class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <router-link to="/tutorials" class="nav-link">Tutorials</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/add" class="nav-link">Add</router-link>
-        </li>
+  <v-app>
+    <v-app-bar
+      app
+      dark
+    >
+      <div class="d-flex align-center">
+        <h2>TeeXee</h2>
       </div>
-    </nav>
 
-    <div class="container mt-3">
-      <router-view />
-    </div>
-  </div>
+      <v-spacer></v-spacer>
+
+      <v-btn
+        href="/"
+        text
+      >
+        <span class="mr-2">Tutorials</span>
+      </v-btn>
+      <v-btn
+        href="/add"
+        text
+      >
+        <span class="mr-2">Add</span>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
+
 export default {
-  name: "app"
+  name: 'App',
+
+  data: () => ({
+    //
+  }),
 };
 </script>

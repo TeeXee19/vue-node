@@ -1,6 +1,11 @@
 module.exports ={
-	devServer: {
+    devServer: {
 		port: 4040
 	},
-		lintOnSave: false
+
+    lintOnSave: false,
+
+    transpileDependencies: [
+      'vuetify'
+    ]
 }
